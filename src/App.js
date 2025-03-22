@@ -6,7 +6,7 @@ import Layout from './components/Layout';
 import DashboardPage from './pages/DashboardPage';
 import ProfilePage from './pages/ProfilePage';
 import AnalyticsPage from './pages/AnalyticsPage';
-import CitizenCardPagePage from './pages/CitizenCardPage';
+import CitizensListPage from './pages/CitizensListPage'; 
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
             <Route path="/" element={<DashboardPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
-            <Route path="/citizen сard" element={<CitizenCardPagePage />} />
+            <Route path="/citizens" element={<CitizensListPage />} />
           </Routes>
         </Layout>
       </PageTitleProvider>

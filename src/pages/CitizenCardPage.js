@@ -5,37 +5,23 @@ import FamilyMembersSection from '../components/CitizenComponents/FamilyMembersS
 import ApplicationHistorySection from '../components/CitizenComponents/ApplicationHistorySection';
 import '../styles/CitizenCardPage.scss';
 
-const CitizenCardPage = (props) => {
-  // Если передан пропс citizenId или citizenData — используем их,
-  // иначе пытаемся получить id из URL через useParams
-  const { id: idFromParams } = useParams();
-  const citizenId = props.citizenId || idFromParams;
+const CitizenCardPage = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
-  // Если уже передали данные, используем их сразу
-  const [citizenData, setCitizenData] = useState(props.citizenData || null);
-  const [loading, setLoading] = useState(props.citizenData ? false : true);
+  const [citizenData, setCitizenData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Если данные уже есть — повторно загружать не нужно
-    if (citizenData) return;
-    if (!citizenId) {
-      setError('Гражданин не найден');
-      setLoading(false);
-      return;
-    }
-
     const fetchData = async () => {
       try {
         const response = await fetch('/citizens.json');
         if (!response.ok) throw new Error('Ошибка загрузки');
         const data = await response.json();
         
-        if (!data.citizens || !Array.isArray(data.citizens)) {
-          throw new Error('Некорректные данные');
-        }
+        if (!data.citizens) throw new Error('Некорректные данные');
         
-        const foundCitizen = data.citizens.find(c => c.id === Number(citizenId));
+        const foundCitizen = data.citizens.find(c => c.id === Number(id));
         if (!foundCitizen) throw new Error('Гражданин не найден');
         
         setCitizenData(foundCitizen);
@@ -47,8 +33,7 @@ const CitizenCardPage = (props) => {
     };
 
     fetchData();
-  }, [citizenId, citizenData]);
-
+  }, [id]);
   if (loading) {
     return (
       <div className="spin-container">

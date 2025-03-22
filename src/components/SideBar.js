@@ -17,7 +17,7 @@ const SideBar = () => {
     { icon: <HomeIcon />, text: 'Главная', path: '/' },
     { icon: <ProfileIcon />, text: 'Профиль', path: '/profile' },
     { icon: <AnalyticsIcon />, text: 'Аналитика', path: '/analytics' },
-    { icon: <NewsIcon />, text: 'Новости', path: '/citizen сard' }
+    { icon: <NewsIcon />, text: 'Картотека', path: '/citizens' }
   ];
 
   return (

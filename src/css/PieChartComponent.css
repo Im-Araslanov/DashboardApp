@@ -1,0 +1,68 @@
+.pie-chart {
+  width: 100%;
+  height: 500px;
+}
+@media (max-width: 600px) {
+  .pie-chart {
+    height: 300px;
+  }
+}
+.pie-chart__container {
+  width: 100%;
+  height: 500px;
+}
+@media (max-width: 600px) {
+  .pie-chart__container {
+    height: 300px;
+  }
+}
+.pie-chart__legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .pie-chart__legend {
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+.pie-chart__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pie-chart__legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .pie-chart__legend-color {
+    width: 8px;
+    height: 8px;
+  }
+}
+.pie-chart .custom-tooltip {
+  background-color: #4318FF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.pie-chart .custom-tooltip p {
+  margin: 5px 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+@media (max-width: 600px) {
+  .pie-chart .custom-tooltip p {
+    font-size: 10px;
+  }
+}
+.pie-chart .custom-tooltip strong {
+  color: #FFFFFF;
+}/*# sourceMappingURL=PieChartComponent.css.map */

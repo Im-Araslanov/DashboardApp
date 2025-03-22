@@ -1,0 +1,85 @@
+.side-bar {
+  width: 200px;
+  height: 100vh;
+  background: #fff;
+  transition: width 0.3s ease, left 0.3s ease;
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+
+  &.collapsed {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 70px;
+
+    .nav-text {
+      display: none;
+    }
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: fill 0.3s;
+    }
+
+    .logo-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px;
+      color: #333;
+
+      @media (max-width: 850px) {
+        font-size: 10px;
+      }
+    }
+
+    .collapse-btn {
+      cursor: pointer;
+      fill: #A3AED0;
+      transition: fill 0.3s;
+    }
+  }
+
+  .nav-menu {
+    padding-top: 20px;
+
+    .nav-item {
+      color: #555;
+      text-decoration: none;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 15px;
+      transition: background 0.2s, color 0.3s;
+    
+      .nav-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor; // Использует цвет текста
+        transition: fill 0.3s ease;
+      }
+    
+      &:hover {
+        background: #f0f0f0;
+        color: #4318FF;
+      }
+    
+      &.active {
+        margin: 0px 5px;
+        border-radius: 20px;
+        background: #e0e0ff;
+        color: #4318FF;
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,14 @@
+// src/styles/base.scss
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-display: swap;
+}
+
+// Пример для компонента
+.side-bar {
+  font-family: 'DM Sans', sans-serif;
+
+  .nav-text {
+    font-family: 'DM Sans', sans-serif;
+  }
+}

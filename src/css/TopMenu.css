@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 20px;
+  z-index: 1000;
+}
+.top-menu__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.top-menu__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Отступ между элементами */
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  padding: 10px;
+}
+.top-menu .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.top-menu__search {
+  padding: 10px 10px 10px 40px;
+  border-radius: 50px;
+  background-color: #f4f7fe;
+  border: none;
+  outline: none;
+  width: 200px;
+  transition: border-color 0.3s ease;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: regular;
+}
+.top-menu__search ::-moz-placeholder {
+  color: #8F9BBA;
+}
+.top-menu__search ::placeholder {
+  color: #8F9BBA;
+}
+.top-menu__search:focus {
+  border-color: #007bff;
+}
+.top-menu .search-icon {
+  position: absolute;
+  left: 12px;
+  width: 11px;
+  height: 11px;
+  pointer-events: none;
+  padding: 15px 11px 15px 10px;
+}
+.top-menu .notification-container {
+  position: relative;
+  cursor: pointer;
+}
+.top-menu .notification-container .notification-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+.top-menu .notification-container .notification-icon:hover {
+  transform: scale(1.1);
+}
+.top-menu .notification-container .notification-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 10;
+}
+.top-menu .notification-container .notification-dropdown .notification-item {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+.top-menu .notification-container .notification-dropdown .notification-item:last-child {
+  border-bottom: none;
+}
+.top-menu .notification-container .notification-dropdown .notification-item:hover {
+  background-color: #f9f9f9;
+}
+.top-menu .profile-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding-right: 11px;
+}
+.top-menu .profile-link .profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #007bff;
+  transition: transform 0.2s ease;
+}
+.top-menu .profile-link .profile-photo:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=TopMenu.css.map */

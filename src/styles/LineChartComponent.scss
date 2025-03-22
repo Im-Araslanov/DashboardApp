@@ -1,0 +1,29 @@
+// src/styles/LineChartComponent.scss
+.dashboard__chart-container {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.line-chart__container {
+  width: 100%;
+  height: 500px;
+  @media (max-width: 600px) {
+    height: 100%;
+  }
+}
+
+.line-chart {
+  width: 100%;
+  height: 500px;
+
+  @media (max-width: 600px) {
+    height: 100%;
+  }
+}
+
+.recharts-cartesian-axis-tick-value{
+  font-size: 12px;
+  fill: #A3AED0;
+}

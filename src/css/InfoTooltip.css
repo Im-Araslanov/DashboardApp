@@ -1,0 +1,48 @@
+.info-tooltip {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  margin-left: 10px;
+}
+.info-tooltip__icon {
+  background: #A3AED0;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .info-tooltip__icon {
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+.info-tooltip__text {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #A3AED0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 10;
+}
+
+.info-tooltip__text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #A3AED0;
+}/*# sourceMappingURL=InfoTooltip.css.map */

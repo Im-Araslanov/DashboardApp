@@ -1,0 +1,165 @@
+.dashboard {
+  padding: 20px;
+
+  &__loading,
+  &__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: #2B3674;
+  }
+
+  &__error {
+    color: #ff4d4f;
+  }
+
+
+  &__kpi-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+
+    @media (max-width: 300px) {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px;
+      min-width: 100%;
+    }
+  }
+
+  &__charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Минимальная ширина 280px, адаптация под экран
+    gap: 20px;
+    margin-bottom: 30px;
+
+    @media (max-width: 850px) {
+      grid-template-columns: 1fr; // На мобильных экранах — 1 колонка
+    }
+
+    @media (min-width: 860px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr); // На планшетах — 2 колонки
+    }
+  }
+
+  &__chart-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px;
+    min-height: 280px; // Минимальная высота блока графика
+
+    @media (max-width: 600px) {
+      padding: 10px;
+      min-height: 250px;
+    }
+
+    .info-tooltip {
+      position: absolute; // Абсолютное позиционирование
+      bottom: 10px; // Отступ от нижнего края
+      right: 10px; // Отступ от правого края
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #A3AED0;
+      cursor: pointer; // Курсор в виде указателя
+    }
+  }
+
+  &__chart-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 10px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      margin-bottom: 5px;
+    }
+
+    &-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 22px;
+      color: #1B2559;
+      font-weight: bold;
+      margin: 0;
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Минимальная ширина 280px, адаптация под экран
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__tasks-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px;
+    min-height: 280px;
+    height: auto; // Или задайте фиксированную высоту, если это необходимо
+  box-sizing: border-box; // Минимальная высота блока графика
+
+    @media (max-width: 600px) {
+      padding: 10px;
+      min-height: 250px;
+    }
+
+    .info-tooltip {
+      position: absolute; // Абсолютное позиционирование
+      bottom: 10px; // Отступ от нижнего края
+      right: 10px; // Отступ от правого края
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #A3AED0;
+      cursor: pointer; // Курсор в виде указателя
+    }
+  }
+
+  &__tasks-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 10px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      margin-bottom: 5px;
+    }
+
+    &-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 22px;
+      color: #1B2559;
+      font-weight: bold;
+      margin: 0;
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

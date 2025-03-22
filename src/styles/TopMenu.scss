@@ -1,0 +1,227 @@
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 20px;
+  background-color: #fff;
+  z-index: 1000;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 10px;
+  }
+
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .top-menu__search {
+      padding: 10px;
+      border-radius: 50px;
+      border: none;
+      background-color: #f4f7fe;
+      outline: none;
+      width: 200px;
+      transition: all 0.3s ease;
+      font-size: 14px;
+
+      &::placeholder {
+        color: #8f9bba;
+      }
+
+      &:focus {
+        border: 1px solid #007bff;
+      }
+
+      @media (max-width: 850px) {
+        width: 100px;
+        font-size: 10px;
+      }
+  
+    }
+  }
+
+  .notification-container {
+    position: relative;
+    cursor: pointer;
+
+    .notification-icon {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .notification-item{
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #A3AED0;
+    }
+
+    .notification-dropdown {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      z-index: 10;
+
+      .notification-item {
+        padding: 10px;
+        font-size: 14px;
+        border-bottom: 1px solid #eee;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          background-color: #f9f9f9;
+        }
+      }
+    }
+  }
+
+  .profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    .profile-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #007bff;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  /* 📱 Адаптив */
+  // @media (max-width: 768px) {
+  //   .top-menu {
+  //     justify-content: space-between;
+  //   }
+
+  //   .burger-menu {
+  //     display: block;
+  //     cursor: pointer;
+
+  //     .burger-icon {
+  //       width: 28px;
+  //       height: 28px;
+  //     }
+  //   }
+
+  //   .top-menu__actions {
+  //     position: fixed;
+  //     top: 60px;
+  //     left: 0;
+  //     background: #fff;
+  //     flex-direction: column;
+  //     width: 80%;
+  //     max-width: 250px;
+  //     padding: 20px;
+  //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  //     transform: translateX(100%);
+  //     transition: transform 0.3s ease-in-out;
+  //   }
+
+  //   .top-menu__actions.open {
+  //     transform: translateX(0);
+  //   }
+
+  //   .search-container {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     width: 100%;
+
+  //     .top-menu__search {
+  //       width: 100%;
+  //       display: none;
+  //     }
+  //   }
+
+  //   .search-container.active .top-menu__search {
+  //     display: block;
+  //   }
+
+  //   .notification-dropdown {
+  //     position: fixed;
+  //     top: 80px;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     width: 90%;
+  //     max-width: 300px;
+  //   }
+  // }
+
+  // /* 📱 Очень маленькие экраны */
+  // @media (max-width: 480px) {
+  //   .top-menu {
+  //     padding: 10px;
+  //   }
+
+  //   .top-menu__actions {
+  //     width: 100%;
+  //     max-width: none;
+  //   }
+
+  //   .profile-photo {
+  //     width: 36px;
+  //     height: 36px;
+  //   }
+
+  //   .notification-dropdown {
+  //     width: 100%;
+  //     max-width: none;
+  //   }
+  // }
+}
+
+// @media (max-width: 768px) {
+//   .top-menu {
+//     padding: 10px;
+//   }
+
+//   .top-menu__actions {
+//     gap: 10px; // Уменьшаем расстояние между элементами
+//   }
+
+//   .search-container {
+//     .top-menu__search {
+//       width: 100px; // Уменьшаем ширину строки поиска
+//     }
+//   }
+
+//   .profile-photo {
+//     width: 30px; // Делаем аватар меньше
+//     height: 30px;
+//   }
+
+//   .notification-dropdown {
+//     width: 180px;
+//   }
+// }

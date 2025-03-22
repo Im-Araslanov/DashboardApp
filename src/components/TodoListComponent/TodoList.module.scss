@@ -1,0 +1,174 @@
+.todoList {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 19px 30px;
+  border-radius: 20px;
+
+
+  @media (max-width: 1200px) {
+    padding: 19px 0px;
+  }
+}
+
+.todoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.todoTitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  color: #2B3674;
+  margin: 1px;
+}
+
+.addTaskIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  fill: #4318ff;
+  transition: 0.2s;
+
+  &:hover {
+    fill: #2b3674;
+  }
+}
+
+.todoItemsContainer {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px; /* небольшой отступ для скролла */
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: grab;
+  min-height: 50px; /* чтобы было удобно хватать */
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.completed {
+  .todoItemText {
+    font-family: "DM Sans", sans-serif;
+    color: #2b3674;
+  }
+  .todoItemCheckbox {
+    background-color: #4318ff;
+    border-color: #4318ff;
+  }
+}
+
+.todoItemCheckbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a3aed0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+
+  span {
+    font-family: "DM Sans", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.todoItemText {
+  font-family: "DM Sans", sans-serif;
+  flex-grow: 1;
+  margin-left: 12px;
+  color: #a3aed0;
+  font-size: 16px;
+}
+
+.todoItemDragIcon {
+  width: 20px;
+  height: 20px;
+  cursor: grab;
+}
+
+.addTaskContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.addTaskInput {
+  width: 100%;
+  padding: 10px 50px 10px 15px; /* Добавляем отступ справа для кнопки */
+  border-radius: 50px;
+  background-color: #f4f7fe;
+  border: none;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+
+  ::placeholder {
+    color: #8F9BBA;
+  }
+
+  &:focus {
+    border-color: #007bff;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 12px;
+  }
+}
+
+.addTaskButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoItemAddIcaon {
+  width: 24px;
+  height: 24px;
+  fill: #4318FF;
+}
+
+.tasksContainer {
+  max-height: 300px; /* Установи ограничение по высоте, например 300px */
+  overflow-y: auto; /* Добавит вертикальный скролл при превышении высоты */
+  padding-right: 5px; /* Чуть сдвинем контент, чтобы скроллбар не перекрывал текст */
+}
+
+.tasksContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tasksContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.tasksContainer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}

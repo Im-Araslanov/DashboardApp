@@ -1,0 +1,20 @@
+// src/styles/Layout.scss
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f7fe;
+  // background-color: #ff0000;
+  margin-left: 150px; // Ширина SideBar
+  transition: margin-left 0.3s ease;
+  border-radius: 15px;
+
+  .collapsed + & {
+    margin-left: 66px; // Ширина SideBar в свернутом состоянии
+  }
+}

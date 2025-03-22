@@ -1,0 +1,99 @@
+// src/styles/ToDoList.scss
+
+.todo-list {
+  &__form {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  &__add-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    background-color: #0088fe;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #0077e6;
+    }
+  }
+
+  &__toggle-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    color: #444;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #e0e0e0;
+    }
+  }
+
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: #A3AED0;
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+
+    &--completed {
+      background-color: #2B3674;
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+
+  &__drag-handle {
+    cursor: grab;
+    margin-left: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,17 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f7fe;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  border-radius: 10px;
+}
+.collapsed + .main-content {
+  margin-left: 70px;
+}/*# sourceMappingURL=Layout.css.map */

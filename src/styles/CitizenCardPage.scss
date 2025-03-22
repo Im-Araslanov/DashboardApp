@@ -1,0 +1,31 @@
+.citizen-card-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .back-button {
+    margin-bottom: 20px;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .header-info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    
+    .main-photo {
+      width: 200px;
+      height: 250px;
+      background: #f0f2f5;
+      border-radius: 8px;
+    }
+    
+    .quick-info {
+      flex-grow: 1;
+    }
+  }
+}

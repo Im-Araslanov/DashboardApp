@@ -1,0 +1,23 @@
+.time-filter {
+  display: flex;
+  justify-content: end;
+  select {
+    padding: 8px 12px;
+    border: none;
+    background: #FFFFFF;
+    color: #2B3674;
+    font-size: 14px;
+    cursor: pointer;
+
+
+    @media (max-width: 600px) {
+      padding: 6px;
+      font-size: 10px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #4318FF;
+    }
+  }
+}

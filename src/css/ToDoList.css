@@ -1,0 +1,84 @@
+.todo-list__form {
+  display: flex;
+  margin-bottom: 15px;
+}
+.todo-list__input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.todo-list__add-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #0088fe;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.todo-list__add-button:hover {
+  background-color: #0077e6;
+}
+.todo-list__toggle-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  color: #444;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.todo-list__toggle-button:hover {
+  background: #e0e0e0;
+}
+.todo-list__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.todo-list__item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: #A3AED0;
+}
+.todo-list__item:hover {
+  background-color: #f9f9f9;
+}
+.todo-list__item--completed {
+  background-color: #2B3674;
+  text-decoration: none;
+  color: white;
+}
+.todo-list__checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.todo-list__drag-handle {
+  cursor: grab;
+  margin-left: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=ToDoList.css.map */

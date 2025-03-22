@@ -1,0 +1,72 @@
+{
+
+  "eslintConfig": {
+  "rules": {
+    "no-unused-vars": "warn"
+  }
+},
+  "citizens": [
+    {
+      "id": 1,
+      "fullName": "Иванов Иван Иванович",
+      "birthDate": "1990-05-14",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Москва, ул. Ленина, д. 15",
+      "phone": "+7 900 123 45 67",
+      "email": "ivanov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Пример'",
+      "profession": "Менеджер",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2020-01-01",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 1,
+          "applicationDate": "2021-06-01",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Иванова Мария Петровна",
+          "relationship": "Жена",
+          "birthDate": "1992-04-20"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "fullName": "Романов Игорь Сергеевич",
+      "birthDate": "1981-01-18",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Хабаровск, ул. Муравьева-Амурского, д. 6",
+      "phone": "+7 914 789 01 23",
+      "email": "romanov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Логист",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2016-09-25",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 18,
+          "applicationDate": "2021-04-16",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Романова Ольга Игоревна",
+          "relationship": "Дочь",
+          "birthDate": "2007-11-03"
+        }
+      ]
+    }
+  ]
+}

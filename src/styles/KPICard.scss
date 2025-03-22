@@ -1,0 +1,161 @@
+.kpi-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px;
+  flex: 1 1 200px; 
+  min-width: 180px; 
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+
+  &:nth-child(1) { background: rgba(67, 24, 255, 0.1); }
+  &:nth-child(2) { background: rgba(106, 210, 255, 0.1); }
+  &:nth-child(3) { background: rgba(239, 244, 251, 0.1); }
+  &:nth-child(4) { background: rgba(255, 193, 7, 0.1); }
+  &:nth-child(5) { background: rgba(76, 175, 80, 0.1); }
+  &:nth-child(6) { background: rgba(244, 67, 54, 0.1); }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+  }
+
+  &__icon {
+    font-size: 24px;
+    color: #4318FF;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: medium;
+    color: #A3AED0;
+    margin: 5px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    text-align: left;
+    max-width: 100%;
+  
+    @media (max-width: 1700px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 14px;
+      text-align: center; // Центрируем текст на маленьких экранах
+      width: 100%; // Занимает всю ширину карточки
+    }
+  }
+
+  &__value {
+    margin: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2B3674;
+    word-wrap: break-word;
+    // text-align: left;
+    align-self: flex-start;
+
+    position: absolute; // Абсолютное позиционирование
+    bottom: 10px; // Отступ от нижнего края
+    left: 10px;
+
+    @media (max-width: 600px) {
+      font-size: 20px;
+      text-align: center; // Выравниваем по центру на мобилках
+    }
+  }
+
+  &__unit {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #A3AED0;
+    margin-left: 4px;
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .info-tooltip {
+    position: absolute; // Абсолютное позиционирование
+    bottom: 10px; // Отступ от нижнего края
+    right: 10px; // Отступ от правого края
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #A3AED0;
+    cursor: pointer; // Курсор в виде указателя
+  }
+
+  .info-tooltip__text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #A3AED0;
+    word-wrap: break-word;
+    text-align: left;
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 1464px) and (min-width: 1373px),
+  (max-width: 1256px) and (min-width: 1177px) {
+.kpi-card {
+flex: 1 1 240px;  // Даем карточкам больше пространства, чтобы не слипались
+min-width: 220px; // Устанавливаем минимальную ширину
+max-width: 260px; // Ограничиваем максимальную ширину
+margin: 10px;     // Добавляем небольшой отступ между карточками
+}
+
+.kpi-card__wrapper {
+flex-wrap: wrap;  // Обеспечиваем перенос при нехватке места
+justify-content: flex-start; // Раздвигаем карточки равномерно
+gap: 15px;  // Даем больше пространства между карточками
+}
+
+.kpi-card__icon {
+min-width: 40px;
+max-width: 40px;
+}
+
+.kpi-card__title {
+font-size: 15px;  // Чуть уменьшаем размер текста
+max-width: 85%;   // Ограничиваем, чтобы текст не вылазил
+text-align: left;
+}
+}
+
+
+}

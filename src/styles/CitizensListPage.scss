@@ -1,19 +1,59 @@
-// CitizensListPage.scss
 .citizens-list-page {
-  padding: 24px;
-  
+  padding: 20px;
+
   .toolbar {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .ant-input-search, 
+    .ant-btn, 
+    .ant-select,
+    .ant-dropdown-button {
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .ant-btn-dangerous {
+      margin-left: auto;
+    }
   }
-  
-  .ant-table-wrapper {
-    overflow-x: auto;
-    
-    @media (max-width: 768px) {
-      .ant-table {
-        min-width: 800px;
+
+  .ant-table {
+    .ant-table-selection-column {
+      width: 40px !important;
+    }
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 12px 8px;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    .toolbar {
+      flex-direction: column;
+
+      > * {
+        width: 100%;
+        margin-right: 0 !important;
+      }
+
+      .ant-btn-dangerous {
+        order: 1;
+      }
+    }
+
+    .ant-table {
+      font-size: 12px;
+      
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td {
+        padding: 8px;
       }
     }
   }

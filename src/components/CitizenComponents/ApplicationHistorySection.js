@@ -1,4 +1,3 @@
-// src/components/CitizenСomponents/ApplicationHistorySection.js
 import React from 'react';
 import { Timeline, Tag } from 'antd';
 
@@ -8,18 +7,27 @@ const statusColors = {
   'В обработке': 'blue',
 };
 
-const ApplicationHistorySection = ({ data }) => (
-  <Timeline mode="alternate">
-    {data.map((app, index) => (
-      <Timeline.Item key={index} label={app.applicationDate}>
-        <div className="application-item">
-          <Tag color={statusColors[app.status]}>{app.status}</Tag>
-          <span className="app-id">Заявка #{app.applicationId}</span>
-          {app.comments && <div className="comments">{app.comments}</div>}
-        </div>
-      </Timeline.Item>
-    ))}
-  </Timeline>
-);
+const ApplicationHistorySection = ({ data }) => {
+  // Преобразуем данные в формат, ожидаемый Timeline
+  const items = data.map((app, index) => ({
+    key: index,
+    label: app.applicationDate,
+    children: (
+      <div className="application-item">
+        <Tag color={statusColors[app.status]}>{app.status}</Tag>
+        <span className="app-id">Заявка #{app.applicationId}</span>
+        {app.comments && <div className="comments">{app.comments}</div>}
+      </div>
+    ),
+    color: statusColors[app.status] || 'gray',
+  }));
+
+  return (
+    <Timeline
+      mode="alternate"
+      items={items}
+    />
+  );
+};
 
 export default ApplicationHistorySection;

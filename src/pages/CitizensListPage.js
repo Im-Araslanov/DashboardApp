@@ -1,9 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Table, Input, Button, Modal, Select, message, Dropdown } from 'antd';
+import React, { useState, useEffect, useMemo } from 'react';
+import { 
+  Table, 
+  Input, 
+  Button, 
+  Modal, 
+  message, 
+  Dropdown, 
+  Menu, 
+  Checkbox,
+  Collapse 
+} from 'antd';
+import { 
+  SettingOutlined, 
+  ExportOutlined, 
+  // MenuFoldOutlined, 
+  // MenuUnfoldOutlined 
+} from '@ant-design/icons';
+import menuFoldIcon from '../assets/svgs/menu-fold-icon.svg';
 import { useNavigate } from 'react-router-dom';
-import * as XLSX from 'xlsx';
 import CitizenCardPage from './CitizenCardPage';
 import '../styles/CitizensListPage.scss';
+
+const { Panel } = Collapse;
 
 const CitizensListPage = () => {
   const [data, setData] = useState([]);
@@ -16,8 +34,7 @@ const CitizensListPage = () => {
     pageSize: 50,
     total: 0
   });
-  const [professions, setProfessions] = useState([]);
-  const [workplaces, setWorkplaces] = useState([]);
+  const [isToolbarCollapsed, setIsToolbarCollapsed] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,17 +43,26 @@ const CitizensListPage = () => {
         const response = await fetch('/citizens.json');
         const { citizens } = await response.json();
         
-        const uniqueProfessions = [...new Set(citizens.map(c => c.profession))];
-        const uniqueWorkplaces = [...new Set(citizens.map(c => c.workplace))];
-        
         setData(citizens);
-        setProfessions(uniqueProfessions);
-        setWorkplaces(uniqueWorkplaces);
-        setVisibleColumns(columns.map(col => col.dataIndex));
         setPagination(prev => ({
           ...prev,
           total: citizens.length
         }));
+        
+        const initialColumns = [
+          'id',
+          'fullName',
+          'birthDate',
+          'maritalStatus',
+          'email',
+          'passportNumber',
+          'registrationDate',
+          'socialSecurityNumber',
+          'education',
+          'phone',
+          'address'
+        ];
+        setVisibleColumns(initialColumns);
       } finally {
         setLoading(false);
       }
@@ -44,29 +70,28 @@ const CitizensListPage = () => {
     fetchData();
   }, []);
 
-  const columns = [
+  const columns = useMemo(() => [
     { title: 'ID', dataIndex: 'id', sorter: (a, b) => a.id - b.id, width: 100 },
     {
       title: 'ФИО',
       dataIndex: 'fullName',
       sorter: (a, b) => a.fullName.localeCompare(b.fullName),
       filterDropdown: ({ setSelectedKeys, selectedKeys, confirm }) => (
-        <div style={{ padding: 8 }}>
+        <div className="name-filter">
           <Input
             placeholder="Поиск по ФИО"
             value={selectedKeys[0]}
             onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
             onPressEnter={confirm}
-            style={{ width: 188, marginBottom: 8, display: 'block' }}
           />
-          <Button type="primary" onClick={confirm} size="small" style={{ width: 90 }}>
+          <Button type="primary" onClick={confirm}>
             Поиск
           </Button>
         </div>
       ),
       onFilter: (value, record) => record.fullName.toLowerCase().includes(value.toLowerCase()),
     },
-    { title: 'Дата рождения', dataIndex: 'birthDate', sorter: (a, b) => new Date(a.birthDate) - new Date(b.birthDate) },
+    { title: 'Дата рождения', dataIndex: 'birthDate' },
     {
       title: 'Семейное положение',
       dataIndex: 'maritalStatus',
@@ -80,7 +105,7 @@ const CitizensListPage = () => {
     },
     { title: 'Почта', dataIndex: 'email' },
     { title: 'Номер паспорта', dataIndex: 'passportNumber' },
-    { title: 'Дата регистрации', dataIndex: 'registrationDate', sorter: (a, b) => new Date(a.registrationDate) - new Date(b.registrationDate) },
+    { title: 'Дата регистрации', dataIndex: 'registrationDate' },
     { title: 'СНИЛС', dataIndex: 'socialSecurityNumber' },
     {
       title: 'Образование',
@@ -92,21 +117,9 @@ const CitizensListPage = () => {
       ],
       onFilter: (value, record) => record.education === value,
     },
-    {
-      title: 'Профессия',
-      dataIndex: 'profession',
-      filters: professions.map(p => ({ text: p, value: p })),
-      onFilter: (value, record) => record.profession === value,
-    },
-    {
-      title: 'Компания',
-      dataIndex: 'workplace',
-      filters: workplaces.map(w => ({ text: w, value: w })),
-      onFilter: (value, record) => record.workplace === value,
-    },
     { title: 'Телефон', dataIndex: 'phone' },
     { title: 'Адрес', dataIndex: 'address' },
-  ];
+  ], []);
 
   const handleExport = (format) => {
     const exportData = selectedRowKeys.length > 0 
@@ -117,16 +130,6 @@ const CitizensListPage = () => {
       message.warning('Нет данных для экспорта');
       return;
     }
-
-    const worksheet = XLSX.utils.json_to_sheet(exportData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Citizens');
-    
-    const fileName = selectedRowKeys.length > 0 
-      ? `citizens_selected_${selectedRowKeys.length}_${new Date().toISOString().slice(0,10)}` 
-      : `citizens_full_${new Date().toISOString().slice(0,10)}`;
-
-    XLSX.writeFile(workbook, `${fileName}.${format}`, { bookType: format });
     message.success(`Экспортировано записей: ${exportData.length}`);
   };
 
@@ -137,11 +140,10 @@ const CitizensListPage = () => {
     }
 
     Modal.confirm({
-      title: `Вы уверены, что хотите удалить ${selectedRowKeys.length} записей?`,
+      title: `Удалить ${selectedRowKeys.length} записей?`,
       content: 'Это действие нельзя отменить!',
       onOk: () => {
-        const newData = data.filter(item => !selectedRowKeys.includes(item.id));
-        setData(newData);
+        setData(prev => prev.filter(item => !selectedRowKeys.includes(item.id)));
         setSelectedRowKeys([]);
         message.success('Записи успешно удалены');
       },
@@ -151,26 +153,13 @@ const CitizensListPage = () => {
   const exportMenuItems = [
     {
       key: 'csv',
-      label: (
-        <span onClick={() => handleExport('csv')}>
-          Экспорт в CSV {selectedRowKeys.length > 0 && `(${selectedRowKeys.length} зап.)`}
-        </span>
-      ),
+      label: <span onClick={() => handleExport('csv')}>CSV</span>,
     },
     {
       key: 'xlsx',
-      label: (
-        <span onClick={() => handleExport('xlsx')}>
-          Экспорт в Excel {selectedRowKeys.length > 0 && `(${selectedRowKeys.length} зап.)`}
-        </span>
-      ),
+      label: <span onClick={() => handleExport('xlsx')}>Excel</span>,
     },
   ];
-
-  const columnOptions = columns.map(col => ({
-    label: col.title,
-    value: col.dataIndex,
-  }));
 
   const rowSelection = {
     selectedRowKeys,
@@ -178,41 +167,116 @@ const CitizensListPage = () => {
     preserveSelectedRowKeys: true,
   };
 
+  const columnMenu = (
+    <Menu className="column-menu">
+      <div className="column-menu-header">
+        <Button 
+          type="link" 
+          onClick={() => setVisibleColumns(columns.map(c => c.dataIndex))}
+        >
+          Выбрать все
+        </Button>
+        <Button 
+          type="link" 
+          onClick={() => setVisibleColumns([])}
+        >
+          Сбросить
+        </Button>
+      </div>
+      <Checkbox.Group
+        value={visibleColumns}
+        onChange={setVisibleColumns}
+      >
+        {columns.map(col => (
+          <Menu.Item key={col.dataIndex}>
+            <Checkbox value={col.dataIndex}>{col.title}</Checkbox>
+          </Menu.Item>
+        ))}
+      </Checkbox.Group>
+    </Menu>
+  );
+
+
   return (
-    <div className="citizens-list-page">
-      <div className="toolbar">
-        <Input.Search
+    <div className="citizens-page">
+      <div className="toolbar-control">
+      <Input.Search
+          className="search-input"
           placeholder="Поиск по всем полям"
           allowClear
-          style={{ width: 300 }}
         />
-        <Button type="primary" onClick={() => navigate('/citizens/new')}>
-          Добавить гражданина
-        </Button>
-        
-        <Dropdown.Button
-          menu={{ items: exportMenuItems }}
-          onClick={() => handleExport('xlsx')}
-          disabled={data.length === 0}
-        >
-          Экспорт данных
-        </Dropdown.Button>
-
-        <Button danger onClick={handleMassDelete} disabled={selectedRowKeys.length === 0}>
-          Удалить выбранные ({selectedRowKeys.length})
-        </Button>
-
-        <Select
-          mode="multiple"
-          placeholder="Видимые столбцы"
-          value={visibleColumns}
-          onChange={setVisibleColumns}
-          style={{ width: 200 }}
-          options={columnOptions}
+        <Button 
+          className="toolbar-toggle-button"
+          type="text" 
+          icon={<img src={menuFoldIcon} alt="Menu Fold Icon" />}
+          // icon={isToolbarCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          onClick={() => setIsToolbarCollapsed(!isToolbarCollapsed)}
         />
       </div>
 
+      <Collapse 
+        className="toolbar-collapse" 
+        activeKey={isToolbarCollapsed ? [] : ['toolbar']}
+        bordered={false}
+        ghost
+      >
+        <Panel 
+          className="toolbar-panel"
+          key="toolbar" 
+          showArrow={false}
+          header={null}
+        >
+
+          
+          <div className="main-toolbar">
+            <Button 
+              className="add-button"
+              type="primary" 
+              onClick={() => navigate('/citizens/new')}
+            >
+              Добавить гражданина
+            </Button>
+            
+            <Dropdown 
+              className="export-dropdown"
+              menu={{ items: exportMenuItems }}
+              trigger={['click']}
+              disabled={data.length === 0}
+            >
+              <Button 
+                className="export-button"
+                type="primary" 
+                icon={<ExportOutlined />}
+              >
+                Экспорт данных
+                {selectedRowKeys.length > 0 && <span className="export-counter">({selectedRowKeys.length})</span>}
+              </Button>
+            </Dropdown>
+
+            <Button 
+              className="delete-button"
+              danger 
+              onClick={handleMassDelete} 
+              disabled={selectedRowKeys.length === 0}
+            >
+              Удалить выбранные <span className="delete-counter">({selectedRowKeys.length})</span>
+            </Button>
+
+            <Dropdown 
+              className="columns-dropdown"
+              overlay={columnMenu} 
+              trigger={['click']}
+            >
+              <Button className="columns-button" icon={<SettingOutlined />}>
+                Столбцы <span className="columns-counter">{visibleColumns.length}/{columns.length}</span>
+              </Button>
+            </Dropdown>
+          </div>
+        </Panel>
+      </Collapse>
+
       <Table
+        className="citizens-table"
         rowSelection={rowSelection}
         columns={columns.filter(col => visibleColumns.includes(col.dataIndex))}
         dataSource={data}
@@ -223,7 +287,7 @@ const CitizensListPage = () => {
           pageSizeOptions: ['50', '100', '200'],
           showTotal: (total) => `Всего записей: ${total}`,
         }}
-        onChange={setPagination}
+        onChange={(pagination) => setPagination(pagination)}
         rowKey="id"
         onRow={(record) => ({
           onClick: () => setSelectedCitizen(record),
@@ -232,6 +296,7 @@ const CitizensListPage = () => {
       />
 
       <Modal
+        className="citizen-modal"
         title="Карточка гражданина"
         width={800}
         open={!!selectedCitizen}

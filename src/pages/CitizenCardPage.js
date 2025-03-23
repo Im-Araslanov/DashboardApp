@@ -5,6 +5,8 @@ import FamilyMembersSection from '../components/CitizenComponents/FamilyMembersS
 import ApplicationHistorySection from '../components/CitizenComponents/ApplicationHistorySection';
 import '../styles/CitizenCardPage.scss';
 
+const { TabPane } = Tabs;
+
 const CitizenCardPage = ({ citizenData: initialData, isModal = false, onClose }) => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ const CitizenCardPage = ({ citizenData: initialData, isModal = false, onClose })
   const [loading, setLoading] = useState(!initialData);
   const [error, setError] = useState(null);
 
-  // Загрузка данных, если они не переданы через пропсы
+  // Загрузка данных
   useEffect(() => {
     if (!initialData && id) {
       const fetchData = async () => {
@@ -20,12 +22,8 @@ const CitizenCardPage = ({ citizenData: initialData, isModal = false, onClose })
           const response = await fetch('/citizens.json');
           if (!response.ok) throw new Error('Ошибка загрузки');
           const data = await response.json();
-          
-          if (!data.citizens) throw new Error('Некорректные данные');
-          
           const foundCitizen = data.citizens.find(c => c.id === Number(id));
           if (!foundCitizen) throw new Error('Гражданин не найден');
-          
           setCitizenData(foundCitizen);
         } catch (err) {
           setError(err.message);
@@ -33,7 +31,6 @@ const CitizenCardPage = ({ citizenData: initialData, isModal = false, onClose })
           setLoading(false);
         }
       };
-
       fetchData();
     }
   }, [id, initialData]);
@@ -42,14 +39,14 @@ const CitizenCardPage = ({ citizenData: initialData, isModal = false, onClose })
     if (isModal && onClose) {
       onClose();
     } else {
-      navigate(-1);
+      navigate('/citizens');
     }
   };
 
   if (loading) {
     return (
       <div className="spin-container">
-        <Spin size="large" tip="Загрузка..." fullscreen />
+        <Spin size="large" tip="Загрузка..." />
       </div>
     );
   }
@@ -82,10 +79,6 @@ const CitizenCardPage = ({ citizenData: initialData, isModal = false, onClose })
 
   return (
     <div className={`citizen-card-page ${isModal ? 'modal-mode' : ''}`}>
-      <Button onClick={handleClose} className="back-button">
-        {isModal ? '← Закрыть' : '← Назад к списку'}
-      </Button>
-      
       <h1 className="page-title">Карточка гражданина</h1>
       
       <div className="header-info">
@@ -99,38 +92,29 @@ const CitizenCardPage = ({ citizenData: initialData, isModal = false, onClose })
         </div>
       </div>
 
-      <Tabs
-        defaultActiveKey="1"
-        items={[
-          {
-            key: '1',
-            label: 'Основная информация',
-            children: (
-              <Descriptions bordered column={2}>
-                <Descriptions.Item label="ФИО">{citizenData.fullName}</Descriptions.Item>
-                <Descriptions.Item label="Дата рождения">{citizenData.birthDate}</Descriptions.Item>
-                <Descriptions.Item label="Пол">{citizenData.gender}</Descriptions.Item>
-                <Descriptions.Item label="Семейное положение">{citizenData.maritalStatus}</Descriptions.Item>
-                <Descriptions.Item label="Адрес" span={2}>{citizenData.address}</Descriptions.Item>
-                <Descriptions.Item label="Телефон">{citizenData.phone}</Descriptions.Item>
-                <Descriptions.Item label="Email">{citizenData.email}</Descriptions.Item>
-                <Descriptions.Item label="Паспорт">{citizenData.passportNumber}</Descriptions.Item>
-                <Descriptions.Item label="Гражданство">{citizenData.citizenship}</Descriptions.Item>
-              </Descriptions>
-            )
-          },
-          {
-            key: '2',
-            label: `Члены семьи (${citizenData.familyMembers?.length || 0})`,
-            children: <FamilyMembersSection data={citizenData.familyMembers || []} />
-          },
-          {
-            key: '3',
-            label: `Заявки (${citizenData.applicationHistory?.length || 0})`,
-            children: <ApplicationHistorySection data={citizenData.applicationHistory || []} />
-          }
-        ]}
-      />
+      <Tabs defaultActiveKey="1">
+      <TabPane tab="Основная информация" key="1">
+  <div className="info-section">
+    <Descriptions bordered column={2}>
+      <Descriptions.Item label="ФИО">{citizenData.fullName}</Descriptions.Item>
+      <Descriptions.Item label="Дата рождения">{citizenData.birthDate}</Descriptions.Item>
+      <Descriptions.Item label="Пол">{citizenData.gender}</Descriptions.Item>
+      <Descriptions.Item label="Семейное положение">{citizenData.maritalStatus}</Descriptions.Item>
+      <Descriptions.Item label="Адрес" span={2}>{citizenData.address}</Descriptions.Item>
+      <Descriptions.Item label="Телефон">{citizenData.phone}</Descriptions.Item>
+      <Descriptions.Item label="Email">{citizenData.email}</Descriptions.Item>
+      <Descriptions.Item label="Паспорт">{citizenData.passportNumber}</Descriptions.Item>
+      <Descriptions.Item label="Гражданство">{citizenData.citizenship}</Descriptions.Item>
+    </Descriptions>
+  </div>
+</TabPane>
+        <TabPane tab={`Члены семьи (${citizenData.familyMembers?.length || 0})`} key="2">
+          <FamilyMembersSection data={citizenData.familyMembers || []} />
+        </TabPane>
+        <TabPane tab={`Заявки (${citizenData.applicationHistory?.length || 0})`} key="3">
+          <ApplicationHistorySection data={citizenData.applicationHistory || []} />
+        </TabPane>
+      </Tabs>
     </div>
   );
 };

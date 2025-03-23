@@ -1,60 +1,244 @@
-.citizens-list-page {
-  padding: 20px;
+// Основные стили
+.citizens-page {
+  padding: 24px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
 
-  .toolbar {
+// Кнопка управления тулбаром
+.toolbar-control {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+  // Поисковая строка
+.search-input {
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background-color: #f4f7fe;
+  outline: none;
+  width: 300px;
+  transition: all 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+
+  &::placeholder {
+    color: #8f9bba;
+  }
+
+  &:focus {
+    border: 1px solid #007bff;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+
+// Анимированное сворачивание
+.toolbar-collapse {
+  background: transparent;
+  
+  .toolbar-panel {
+    .ant-collapse-content-box {
+      padding: 0 !important;
+    }
+  }
+}
+
+// Основной тулбар
+.main-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  // Кнопка добавления
+  .add-button {
+    background: #3965FF;
+    border-color: #3965FF;
+    padding: 0 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  // Выпадающее меню экспорта
+  .export-dropdown {
+    background-color: #01B574;
+    font-family: 'DM Sans', sans-serif;
+    .export-button {
+      background: #01B574;
+      border-color: #01B574;
+      border-radius: 10px;
+      padding: 0 20px;
+      
+      .export-counter {
+        margin-left: 6px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Кнопка удаления
+  .delete-button {
+    padding: 0 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    background-color: #E31A1A;
+    
+    .delete-counter {
+      margin-left: 6px;
+      font-weight: bold;
+
+    }
+  }
+
+  // Управление столбцами
+  .columns-dropdown {
+    font-family: 'DM Sans', sans-serif;
+    .columns-button {
+      border-radius: 10px;
+      padding: 0 20px;
+      
+      .columns-counter {
+        margin-left: 6px;
+        font-weight: bold;
+        color: #1890ff;
+      }
+    }
+  }
+}
+
+// Меню выбора столбцов
+.column-menu {
+  padding: 8px 16px;
+  max-height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  max-width: 300px;
+
+  .column-menu-header {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
     display: flex;
+    justify-content: space-between;
+
+    .select-all-button {
+      color: #1890ff;
+    }
+
+    .reset-button {
+      color: #E31A1A;
+    }
+  }
+
+  .column-checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ant-checkbox-group{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    column-gap: 8px;
+    max-width: 300px;
+  }
 
-    .ant-input-search, 
-    .ant-btn, 
-    .ant-select,
-    .ant-dropdown-button {
-      margin-bottom: 10px;
-      flex-shrink: 0;
-    }
+  .column-menu-item {
+    padding: 4px 0;
 
-    .ant-btn-dangerous {
-      margin-left: auto;
+    .column-checkbox {
+      width: 100%;
     }
+  }
+}
+
+
+// Таблица
+.citizens-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .ant-table-thead > tr > th {
+    background: #FFFFFF;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #A3AED0;
+  }
+
+  .ant-table-row {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2B3674;
   }
 
   .ant-table {
-    .ant-table-selection-column {
-      width: 40px !important;
+    border: none;
+  
+    // Убираем границы у ячеек
+    .ant-table-cell {
+      border: none;
+    }
+    
+  }
+}
+
+// Модальное окно
+.citizen-modal {
+  .ant-modal-content {
+    border-radius: 8px;
+    
+    .ant-modal-header {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .citizens-page {
+    padding: 12px;
+  }
+
+  .main-toolbar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+
+    > * {
+      width: 100%;
     }
 
-    .ant-table-thead > tr > th,
-    .ant-table-tbody > tr > td {
-      padding: 12px 8px;
-      white-space: nowrap;
+    .search-input {
+      min-width: auto;
+    }
+
+    .ant-btn {
+      justify-content: center;
     }
   }
 
-  @media (max-width: 768px) {
-    padding: 10px;
-
-    .toolbar {
-      flex-direction: column;
-
-      > * {
-        width: 100%;
-        margin-right: 0 !important;
-      }
-
-      .ant-btn-dangerous {
-        order: 1;
-      }
-    }
-
-    .ant-table {
-      font-size: 12px;
-      
-      .ant-table-thead > tr > th,
-      .ant-table-tbody > tr > td {
-        padding: 8px;
-      }
+  .citizens-table {
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 12px 8px;
     }
   }
 }

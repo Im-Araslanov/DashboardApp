@@ -1,0 +1,224 @@
+.application-history-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(163, 174, 208, 0.15);
+  padding: 24px;
+
+  // Стилизация антидизайновского Timeline
+  .custom-timeline {
+    .ant-timeline-item {
+      padding-bottom: 30px !important;
+
+      &-label {
+        color: #A3AED0 !important;
+        font-size: 14px !important;
+        width: 120px !important;
+      }
+
+      &-head {
+        background: #F4F7FE !important;
+        border-color: #A3AED0 !important;
+      }
+
+      &-content {
+        padding: 16px !important;
+        background: #F4F7FE !important;
+        border-radius: 8px !important;
+      }
+    }
+
+    .application-item {
+      background: white !important;
+      padding: 16px !important;
+      border-radius: 8px !important;
+      box-shadow: 0 2px 8px rgba(163, 174, 208, 0.1) !important;
+
+      &-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 12px !important;
+
+        .status {
+          margin: 0 !important;
+          border: none !important;
+          padding: 4px 12px !important;
+          border-radius: 20px !important;
+        }
+
+        .app-id {
+          color: #A3AED0 !important;
+          font-size: 12px !important;
+        }
+      }
+
+      .comments {
+        color: #2B3674 !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px !important;
+
+    .custom-timeline {
+      .ant-timeline-item-label {
+        width: 80px !important;
+      }
+    }
+  }
+
+  .table-wrapper {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(163, 174, 208, 0.15);
+  padding: 24px;
+  margin: 16px 0;
+  position: relative;
+
+  .ant-table {
+    border-radius: 16px;
+    overflow: hidden;
+
+    &-container {
+      overflow-x: auto;
+      
+      &::-webkit-scrollbar {
+        height: 8px;
+        background: #F4F7FE;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: #A3AED0;
+        border-radius: 4px;
+      }
+    }
+
+    &-thead > tr > th {
+      background: #F4F7FE !important;
+      color: #A3AED0 !important;
+      font-weight: 500 !important;
+      white-space: nowrap;
+    }
+
+    &-tbody > tr > td {
+      color: #2B3674 !important;
+      border-bottom: 1px solid #F4F7FE !important;
+    }
+
+    &-pagination {
+      margin: 16px 0 !important;
+    }
+  }
+
+  // Индикатор прокрутки
+  &:after {
+    content: '↔';
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    color: #A3AED0;
+    font-size: 24px;
+    opacity: 0.6;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    border-radius: 8px;
+    
+    .ant-table {
+      &-thead > tr > th {
+        font-size: 14px !important;
+      }
+      
+      &-tbody > tr > td {
+        font-size: 14px !important;
+      }
+    }
+  }
+}
+}
+
+.table-wrapper {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(163, 174, 208, 0.15);
+  padding: 24px;
+  margin: 16px 0;
+  position: relative;
+
+  .ant-table {
+    border-radius: 16px;
+    overflow: hidden;
+
+    &-container {
+      overflow-x: auto;
+      
+      &::-webkit-scrollbar {
+        height: 8px;
+        background: #F4F7FE;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: #A3AED0;
+        border-radius: 4px;
+      }
+    }
+
+    &-thead > tr > th {
+      background: #F4F7FE !important;
+      color: #A3AED0 !important;
+      font-weight: 500 !important;
+      white-space: nowrap;
+    }
+
+    &-tbody > tr > td {
+      color: #2B3674 !important;
+      border-bottom: 1px solid #F4F7FE !important;
+    }
+
+    &-pagination {
+      margin: 16px 0 !important;
+    }
+  }
+
+  // Индикатор прокрутки
+  &:after {
+    content: '↔';
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    color: #A3AED0;
+    font-size: 24px;
+    opacity: 0.6;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    border-radius: 8px;
+    
+    .ant-table {
+      &-thead > tr > th {
+        font-size: 14px !important;
+      }
+      
+      &-tbody > tr > td {
+        font-size: 14px !important;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Timeline, Tag } from 'antd';
+import { Table, Tag } from 'antd';
+import '../../styles/ApplicationHistory.scss';
 
 const statusColors = {
   'Одобрено': 'green',
@@ -8,25 +9,47 @@ const statusColors = {
 };
 
 const ApplicationHistorySection = ({ data }) => {
-  // Преобразуем данные в формат, ожидаемый Timeline
-  const items = data.map((app, index) => ({
-    key: index,
-    label: app.applicationDate,
-    children: (
-      <div className="application-item">
-        <Tag color={statusColors[app.status]}>{app.status}</Tag>
-        <span className="app-id">Заявка #{app.applicationId}</span>
-        {app.comments && <div className="comments">{app.comments}</div>}
-      </div>
-    ),
-    color: statusColors[app.status] || 'gray',
-  }));
+  const columns = [
+    {
+      title: 'ID заявки',
+      dataIndex: 'applicationId',
+      width: 120,
+      fixed: 'left',
+      sorter: (a, b) => a.applicationId - b.applicationId,
+    },
+    {
+      title: 'Дата',
+      dataIndex: 'applicationDate',
+      width: 150,
+      sorter: (a, b) => new Date(a.applicationDate) - new Date(b.applicationDate),
+    },
+    {
+      title: 'Статус',
+      dataIndex: 'status',
+      width: 150,
+      render: (status) => (
+        <Tag color={statusColors[status] || 'gray'}>
+          {status}
+        </Tag>
+      ),
+    },
+    {
+      title: 'Комментарии',
+      dataIndex: 'comments',
+      render: (comments) => comments || '—',
+    },
+  ];
 
   return (
-    <Timeline
-      mode="alternate"
-      items={items}
-    />
+    <div className="table-wrapper">
+      <Table
+        columns={columns}
+        dataSource={data}
+        rowKey="applicationId"
+        pagination={false}
+        scroll={{ x: 'max-content' }}
+      />
+    </div>
   );
 };
 

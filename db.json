@@ -1,0 +1,2021 @@
+{
+  "citizens": [
+    {
+      "id": "1",
+      "fullName": "Иванов Иван Иванович",
+      "birthDate": "1990-05-14",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Москва, ул. Ленина, д. 15",
+      "phone": "+7 900 123 45 67",
+      "email": "ivanov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Пример'",
+      "profession": "Менеджер",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2020-01-01",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 1,
+          "applicationDate": "2021-06-01",
+          "status": "Одобрено"
+        },
+        {
+          "applicationId": 2,
+          "applicationDate": "2022-03-10",
+          "status": "Ожидает рассмотрения"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Иванова Мария Петровна",
+          "relationship": "Жена",
+          "birthDate": "1992-04-20"
+        },
+        {
+          "name": "Иванов Артем Иванович",
+          "relationship": "Сын",
+          "birthDate": "2015-07-12"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "fullName": "Петрова Анна Сергеевна",
+      "birthDate": "1985-08-22",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Санкт-Петербург, ул. Пушкина, д. 10",
+      "phone": "+7 911 234 56 78",
+      "email": "petrova@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Технологии'",
+      "profession": "Инженер",
+      "passportNumber": "2345 678901",
+      "registrationDate": "2019-02-15",
+      "socialSecurityNumber": "234-56-7890",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 3,
+          "applicationDate": "2021-09-15",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "3",
+      "fullName": "Смирнов Дмитрий Александрович",
+      "birthDate": "1978-11-30",
+      "gender": "Мужчина",
+      "maritalStatus": "Разведён",
+      "address": "г. Новосибирск, ул. Гагарина, д. 5",
+      "phone": "+7 903 345 67 89",
+      "email": "smirnov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Строй'",
+      "profession": "Строитель",
+      "passportNumber": "3456 789012",
+      "registrationDate": "2018-03-20",
+      "socialSecurityNumber": "345-67-8901",
+      "education": "Среднее специальное",
+      "applicationHistory": [
+        {
+          "applicationId": 4,
+          "applicationDate": "2022-01-25",
+          "status": "Отклонено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Смирнова Ольга Дмитриевна",
+          "relationship": "Дочь",
+          "birthDate": "2005-06-18"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "fullName": "Кузнецова Елена Викторовна",
+      "birthDate": "1992-03-17",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Екатеринбург, ул. Свердлова, д. 22",
+      "phone": "+7 922 456 78 90",
+      "email": "kuznetsova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Медиа'",
+      "profession": "Журналист",
+      "passportNumber": "4567 890123",
+      "registrationDate": "2021-04-10",
+      "socialSecurityNumber": "456-78-9012",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 5,
+          "applicationDate": "2022-07-05",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Кузнецов Алексей Евгеньевич",
+          "relationship": "Муж",
+          "birthDate": "1990-09-28"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "fullName": "Васильев Павел Игоревич",
+      "birthDate": "1980-07-08",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Казань, ул. Баумана, д. 3",
+      "phone": "+7 917 567 89 01",
+      "email": "vasiliev@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ОАО 'Энергия'",
+      "profession": "Электрик",
+      "passportNumber": "5678 901234",
+      "registrationDate": "2017-05-30",
+      "socialSecurityNumber": "567-89-0123",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 6,
+          "applicationDate": "2021-11-30",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Васильева Ирина Павловна",
+          "relationship": "Жена",
+          "birthDate": "1982-12-15"
+        },
+        {
+          "name": "Васильев Максим Павлович",
+          "relationship": "Сын",
+          "birthDate": "2010-02-23"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "fullName": "Соколова Ольга Михайловна",
+      "birthDate": "1995-02-25",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Нижний Новгород, ул. Горького, д. 18",
+      "phone": "+7 920 678 90 12",
+      "email": "sokolova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Финансы'",
+      "profession": "Бухгалтер",
+      "passportNumber": "6789 012345",
+      "registrationDate": "2022-06-05",
+      "socialSecurityNumber": "678-90-1234",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 7,
+          "applicationDate": "2022-08-14",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "7",
+      "fullName": "Попов Андрей Викторович",
+      "birthDate": "1975-04-11",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Самара, ул. Куйбышева, д. 7",
+      "phone": "+7 937 789 01 23",
+      "email": "popov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Водитель",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2016-07-22",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 8,
+          "applicationDate": "2021-02-09",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Попова Юлия Андреевна",
+          "relationship": "Дочь",
+          "birthDate": "2000-08-30"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "fullName": "Лебедева Мария Сергеевна",
+      "birthDate": "1988-09-19",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Ростов-на-Дону, ул. Советская, д. 24",
+      "phone": "+7 961 890 12 34",
+      "email": "lebedeva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Медцентр'",
+      "profession": "Врач",
+      "passportNumber": "8901 234567",
+      "registrationDate": "2019-09-01",
+      "socialSecurityNumber": "890-12-3456",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 9,
+          "applicationDate": "2022-05-18",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Лебедев Иван Максимович",
+          "relationship": "Муж",
+          "birthDate": "1985-11-05"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "fullName": "Козлов Илья Николаевич",
+      "birthDate": "1991-12-04",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Красноярск, ул. Ленина, д. 45",
+      "phone": "+7 913 901 23 45",
+      "email": "kozlov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Техно'",
+      "profession": "Программист",
+      "passportNumber": "9012 345678",
+      "registrationDate": "2020-10-12",
+      "socialSecurityNumber": "901-23-4567",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 10,
+          "applicationDate": "2021-03-27",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "10",
+      "fullName": "Новикова Анастасия Дмитриевна",
+      "birthDate": "1983-06-29",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Воронеж, ул. Кольцовская, д. 16",
+      "phone": "+7 920 012 34 56",
+      "email": "novikova@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Фармацевтика'",
+      "profession": "Фармацевт",
+      "passportNumber": "0123 456789",
+      "registrationDate": "2018-11-28",
+      "socialSecurityNumber": "012-34-5678",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 11,
+          "applicationDate": "2022-04-03",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Новиков Дмитрий Анастасиевич",
+          "relationship": "Сын",
+          "birthDate": "2012-01-14"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "fullName": "Морозов Сергей Игоревич",
+      "birthDate": "1977-05-16",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Пермь, ул. Сибирская, д. 2",
+      "phone": "+7 902 123 45 67",
+      "email": "morozov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Стройка'",
+      "profession": "Инженер-строитель",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2015-08-19",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 12,
+          "applicationDate": "2021-07-11",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Морозова Екатерина Сергеевна",
+          "relationship": "Дочь",
+          "birthDate": "2003-09-24"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "fullName": "Федорова Виктория Александровна",
+      "birthDate": "1993-11-07",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Омск, ул. Маркса, д. 33",
+      "phone": "+7 951 234 56 78",
+      "email": "fedorova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Консалтинг'",
+      "profession": "Консультант",
+      "passportNumber": "2345 678901",
+      "registrationDate": "2022-01-29",
+      "socialSecurityNumber": "234-56-7890",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 13,
+          "applicationDate": "2022-06-22",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "13",
+      "fullName": "Семенов Кирилл Владимирович",
+      "birthDate": "1986-04-03",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Краснодар, ул. Красная, д. 4",
+      "phone": "+7 918 345 67 89",
+      "email": "semenov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Агро'",
+      "profession": "Агроном",
+      "passportNumber": "3456 789012",
+      "registrationDate": "2019-03-14",
+      "socialSecurityNumber": "345-67-8901",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 14,
+          "applicationDate": "2021-10-08",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Семенова Анна Кирилловна",
+          "relationship": "Дочь",
+          "birthDate": "2015-07-29"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "fullName": "Захарова Екатерина Олеговна",
+      "birthDate": "1990-08-26",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Саратов, ул. Московская, д. 11",
+      "phone": "+7 927 456 78 90",
+      "email": "zakharova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Образование'",
+      "profession": "Учитель",
+      "passportNumber": "4567 890123",
+      "registrationDate": "2020-05-21",
+      "socialSecurityNumber": "456-78-9012",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 15,
+          "applicationDate": "2022-03-17",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Захаров Олег Екатеринович",
+          "relationship": "Сын",
+          "birthDate": "2018-01-10"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "fullName": "Волков Алексей Петрович",
+      "birthDate": "1979-03-13",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Тюмень, ул. Республики, д. 8",
+      "phone": "+7 904 567 89 01",
+      "email": "volkov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ОАО 'Нефть'",
+      "profession": "Инженер-нефтяник",
+      "passportNumber": "5678 901234",
+      "registrationDate": "2017-06-10",
+      "socialSecurityNumber": "567-89-0123",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 16,
+          "applicationDate": "2021-12-04",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Волкова Елена Алексеевна",
+          "relationship": "Жена",
+          "birthDate": "1981-05-22"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "fullName": "Соловьева Юлия Андреевна",
+      "birthDate": "1984-10-30",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Иркутск, ул. Ленина, д. 19",
+      "phone": "+7 914 678 90 12",
+      "email": "solovyeva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Туризм'",
+      "profession": "Гид",
+      "passportNumber": "6789 012345",
+      "registrationDate": "2021-08-07",
+      "socialSecurityNumber": "678-90-1234",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 17,
+          "applicationDate": "2022-07-29",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "17",
+      "fullName": "Романов Игорь Сергеевич",
+      "birthDate": "1981-01-18",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Хабаровск, ул. Муравьева-Амурского, д. 6",
+      "phone": "+7 914 789 01 23",
+      "email": "romanov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Логист",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2016-09-25",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 18,
+          "applicationDate": "2021-04-16",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Романова Ольга Игоревна",
+          "relationship": "Дочь",
+          "birthDate": "2007-11-03"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "fullName": "Лебедев Александр Викторович",
+      "birthDate": "1994-07-05",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Барнаул, ул. Льва Толстого, д. 12",
+      "phone": "+7 905 890 12 34",
+      "email": "lebedev@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'ИТ'",
+      "profession": "Системный администратор",
+      "passportNumber": "8901 234567",
+      "registrationDate": "2020-11-02",
+      "socialSecurityNumber": "890-12-3456",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 19,
+          "applicationDate": "2022-01-20",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "19",
+      "fullName": "Кудрявцева Ольга Ивановна",
+      "birthDate": "1987-12-12",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Ульяновск, ул. Гончарова, д. 7",
+      "phone": "+7 937 901 23 45",
+      "email": "kudryavtseva@mail.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Финансы'",
+      "profession": "Финансовый аналитик",
+      "passportNumber": "9012 345678",
+      "registrationDate": "2019-04-18",
+      "socialSecurityNumber": "901-23-4567",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 20,
+          "applicationDate": "2022-06-09",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Кудрявцев Иван Олегович",
+          "relationship": "Сын",
+          "birthDate": "2016-03-21"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "fullName": "Григорьев Максим Алексеевич",
+      "birthDate": "1989-09-24",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Ярославль, ул. Свободы, д. 14",
+      "phone": "+7 920 012 34 56",
+      "email": "grigoriev@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Строительство'",
+      "profession": "Архитектор",
+      "passportNumber": "0123 456789",
+      "registrationDate": "2018-12-05",
+      "socialSecurityNumber": "012-34-5678",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 21,
+          "applicationDate": "2021-08-27",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Григорьева Анна Максимовна",
+          "relationship": "Дочь",
+          "birthDate": "2013-05-19"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "fullName": "Тихонов Владимир Сергеевич",
+      "birthDate": "1982-06-10",
+      "gender": "Мужчина",
+      "maritalStatus": "Разведён",
+      "address": "г. Челябинск, ул. Кирова, д. 23",
+      "phone": "+7 909 123 45 67",
+      "email": "tihonov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Металлург'",
+      "profession": "Инженер-металлург",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2015-03-17",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 22,
+          "applicationDate": "2021-07-22",
+          "status": "Отклонено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "22",
+      "fullName": "Андреева Светлана Игоревна",
+      "birthDate": "1993-11-28",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Оренбург, ул. Советская, д. 15",
+      "phone": "+7 922 234 56 78",
+      "email": "andreeva@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Культура'",
+      "profession": "Художник",
+      "passportNumber": "2345 678901",
+      "registrationDate": "2018-05-30",
+      "socialSecurityNumber": "234-56-7890",
+      "education": "Неполное высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 23,
+          "applicationDate": "2022-09-05",
+          "status": "В процессе"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "23",
+      "fullName": "Макаров Евгений Викторович",
+      "birthDate": "1976-02-14",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Липецк, ул. Первомайская, д. 8",
+      "phone": "+7 910 345 67 89",
+      "email": "makarov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Машиностроение'",
+      "profession": "Технолог",
+      "passportNumber": "3456 789012",
+      "registrationDate": "2017-07-11",
+      "socialSecurityNumber": "345-67-8901",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 24,
+          "applicationDate": "2021-12-18",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Макарова Ирина Евгеньевна",
+          "relationship": "Дочь",
+          "birthDate": "2001-09-03"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "fullName": "Зайцева Наталья Александровна",
+      "birthDate": "1989-04-07",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Тула, ул. Ленина, д. 33",
+      "phone": "+7 911 456 78 90",
+      "email": "zaytseva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Реклама'",
+      "profession": "Маркетолог",
+      "passportNumber": "4567 890123",
+      "registrationDate": "2020-08-24",
+      "socialSecurityNumber": "456-78-9012",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 25,
+          "applicationDate": "2022-03-30",
+          "status": "Отклонено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Зайцев Иван Натальевич",
+          "relationship": "Сын",
+          "birthDate": "2017-06-12"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "fullName": "Сергеев Антон Дмитриевич",
+      "birthDate": "1984-09-21",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Пенза, ул. Московская, д. 12",
+      "phone": "+7 903 567 89 01",
+      "email": "sergeev@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ОАО 'Связь'",
+      "profession": "Инженер связи",
+      "passportNumber": "5678 901234",
+      "registrationDate": "2016-10-05",
+      "socialSecurityNumber": "567-89-0123",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 26,
+          "applicationDate": "2021-05-14",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "26",
+      "fullName": "Сорокина Елена Владимировна",
+      "birthDate": "1991-07-30",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Курск, ул. Энгельса, д. 19",
+      "phone": "+7 912 678 90 12",
+      "email": "sorokina@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Торговля'",
+      "profession": "Менеджер по продажам",
+      "passportNumber": "6789 012345",
+      "registrationDate": "2019-11-29",
+      "socialSecurityNumber": "678-90-1234",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 27,
+          "applicationDate": "2022-07-19",
+          "status": "В процессе"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "27",
+      "fullName": "Николаев Павел Андреевич",
+      "birthDate": "1978-12-05",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Тверь, ул. Советская, д. 7",
+      "phone": "+7 913 789 01 23",
+      "email": "nikolaev@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Водитель",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2018-02-16",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 28,
+          "applicationDate": "2021-09-08",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Николаева Ольга Павловна",
+          "relationship": "Дочь",
+          "birthDate": "2004-03-22"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "fullName": "Крылова Виктория Сергеевна",
+      "birthDate": "1987-03-18",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Брянск, ул. Фрунзе, д. 24",
+      "phone": "+7 904 890 12 34",
+      "email": "krylova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Медицина'",
+      "profession": "Медсестра",
+      "passportNumber": "8901 234567",
+      "registrationDate": "2020-04-03",
+      "socialSecurityNumber": "890-12-3456",
+      "education": "Среднее специальное",
+      "applicationHistory": [
+        {
+          "applicationId": 29,
+          "applicationDate": "2022-01-25",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Крылов Иван Викторович",
+          "relationship": "Сын",
+          "birthDate": "2014-11-09"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "fullName": "Орлов Дмитрий Игоревич",
+      "birthDate": "1994-06-25",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Белгород, ул. 50 лет Октября, д. 11",
+      "phone": "+7 914 901 23 45",
+      "email": "orlov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'ИТ'",
+      "profession": "Разработчик",
+      "passportNumber": "9012 345678",
+      "registrationDate": "2019-06-13",
+      "socialSecurityNumber": "901-23-4567",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 30,
+          "applicationDate": "2021-11-02",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "30",
+      "fullName": "Михайлова Алина Александровна",
+      "birthDate": "1985-10-12",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Смоленск, ул. Ленина, д. 3",
+      "phone": "+7 905 012 34 56",
+      "email": "mikhaylova@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Финансы'",
+      "profession": "Бухгалтер",
+      "passportNumber": "0123 456789",
+      "registrationDate": "2017-12-20",
+      "socialSecurityNumber": "012-34-5678",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 31,
+          "applicationDate": "2022-05-11",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "31",
+      "fullName": "Федотов Илья Сергеевич",
+      "birthDate": "1980-01-29",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Калининград, ул. Горького, д. 18",
+      "phone": "+7 915 123 45 67",
+      "email": "fedotov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Стройка'",
+      "profession": "Инженер-строитель",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2016-03-08",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 32,
+          "applicationDate": "2021-08-23",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Федотова Анна Ильевна",
+          "relationship": "Дочь",
+          "birthDate": "2006-04-17"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "fullName": "Гусева Марина Олеговна",
+      "birthDate": "1992-05-08",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Архангельск, ул. Поморская, д. 22",
+      "phone": "+7 916 234 56 78",
+      "email": "guseva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Образование'",
+      "profession": "Учитель",
+      "passportNumber": "2345 678901",
+      "registrationDate": "2020-09-18",
+      "socialSecurityNumber": "234-56-7890",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 33,
+          "applicationDate": "2022-02-04",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Гусев Иван Маринович",
+          "relationship": "Сын",
+          "birthDate": "2019-07-30"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "fullName": "Кузьмин Алексей Викторович",
+      "birthDate": "1983-09-15",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Мурманск, ул. Ленина, д. 5",
+      "phone": "+7 907 345 67 89",
+      "email": "kuzmin@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Логист",
+      "passportNumber": "3456 789012",
+      "registrationDate": "2018-05-02",
+      "socialSecurityNumber": "345-67-8901",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 34,
+          "applicationDate": "2021-11-30",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Кузьмина Елена Алексеевна",
+          "relationship": "Дочь",
+          "birthDate": "2008-12-01"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "fullName": "Лазарева Юлия Петровна",
+      "birthDate": "1988-12-01",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Владивосток, ул. Светланская, д. 14",
+      "phone": "+7 908 456 78 90",
+      "email": "lazareva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Медиа'",
+      "profession": "Журналист",
+      "passportNumber": "4567 890123",
+      "registrationDate": "2019-07-26",
+      "socialSecurityNumber": "456-78-9012",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 35,
+          "applicationDate": "2022-04-15",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "35",
+      "fullName": "Белов Игорь Николаевич",
+      "birthDate": "1979-04-23",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Волгоград, ул. Мира, д. 8",
+      "phone": "+7 917 567 89 01",
+      "email": "belov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ОАО 'Энергия'",
+      "profession": "Электрик",
+      "passportNumber": "5678 901234",
+      "registrationDate": "2016-08-11",
+      "socialSecurityNumber": "567-89-0123",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 36,
+          "applicationDate": "2021-03-04",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Белова Анна Игоревна",
+          "relationship": "Дочь",
+          "birthDate": "2002-11-18"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "fullName": "Соболева Анна Дмитриевна",
+      "birthDate": "1990-07-14",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Саратов, ул. Радищева, д. 16",
+      "phone": "+7 918 678 90 12",
+      "email": "soboleva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Фармацевтика'",
+      "profession": "Фармацевт",
+      "passportNumber": "6789 012345",
+      "registrationDate": "2020-10-09",
+      "socialSecurityNumber": "678-90-1234",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 37,
+          "applicationDate": "2022-06-21",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Соболев Дмитрий Антонович",
+          "relationship": "Сын",
+          "birthDate": "2015-03-05"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "fullName": "Воробьев Максим Сергеевич",
+      "birthDate": "1985-11-30",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Ижевск, ул. Пушкинская, д. 9",
+      "phone": "+7 919 789 01 23",
+      "email": "vorobyev@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Машиностроение'",
+      "profession": "Инженер",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2017-12-28",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 38,
+          "applicationDate": "2021-07-17",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Воробьева Екатерина Максимовна",
+          "relationship": "Дочь",
+          "birthDate": "2010-08-24"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "fullName": "Киселева Оксана Викторовна",
+      "birthDate": "1991-03-05",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Уфа, ул. Ленина, д. 20",
+      "phone": "+7 920 890 12 34",
+      "email": "kiseleva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Консалтинг'",
+      "profession": "Консультант",
+      "passportNumber": "8901 234567",
+      "registrationDate": "2021-01-14",
+      "socialSecurityNumber": "890-12-3456",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 39,
+          "applicationDate": "2022-08-03",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "39",
+      "fullName": "Жуков Павел Андреевич",
+      "birthDate": "1987-08-20",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Краснодар, ул. Красная, д. 25",
+      "phone": "+7 909 901 23 45",
+      "email": "zhukov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Агро'",
+      "profession": "Агроном",
+      "passportNumber": "9012 345678",
+      "registrationDate": "2019-04-06",
+      "socialSecurityNumber": "901-23-4567",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 40,
+          "applicationDate": "2021-10-22",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Жукова Анна Павловна",
+          "relationship": "Дочь",
+          "birthDate": "2016-06-11"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "fullName": "Соловьева Екатерина Игоревна",
+      "birthDate": "1993-09-27",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Астрахань, ул. Куйбышева, д. 13",
+      "phone": "+7 904 012 34 56",
+      "email": "solovyeva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Образование'",
+      "profession": "Учитель",
+      "passportNumber": "0123 456789",
+      "registrationDate": "2020-06-17",
+      "socialSecurityNumber": "012-34-5678",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 41,
+          "applicationDate": "2022-01-29",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Соловьев Иван Екатеринович",
+          "relationship": "Сын",
+          "birthDate": "2018-04-08"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "fullName": "Егоров Дмитрий Сергеевич",
+      "birthDate": "1986-02-22",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Тверь, ул. Советская, д. 15",
+      "phone": "+7 910 123 45 67",
+      "email": "egorov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Технологии'",
+      "profession": "Инженер",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2015-07-12",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 42,
+          "applicationDate": "2021-09-23",
+          "status": "Отклонено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "42",
+      "fullName": "Кудряшова Анна Ивановна",
+      "birthDate": "1992-08-11",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Рязань, ул. Ленина, д. 20",
+      "phone": "+7 920 234 56 78",
+      "email": "kudryashova@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Культура'",
+      "profession": "Художник",
+      "passportNumber": "2345 678901",
+      "registrationDate": "2018-03-19",
+      "socialSecurityNumber": "234-56-7890",
+      "education": "Неполное высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 43,
+          "applicationDate": "2022-11-01",
+          "status": "В процессе"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "43",
+      "fullName": "Лебедев Евгений Викторович",
+      "birthDate": "1979-05-17",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Липецк, ул. Первомайская, д. 8",
+      "phone": "+7 911 345 67 89",
+      "email": "lebedev@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Машиностроение'",
+      "profession": "Технолог",
+      "passportNumber": "3456 789012",
+      "registrationDate": "2017-09-22",
+      "socialSecurityNumber": "345-67-8901",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 44,
+          "applicationDate": "2021-12-29",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Лебедева Ирина Евгеньевна",
+          "relationship": "Дочь",
+          "birthDate": "2001-09-03"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "fullName": "Смирнова Наталья Александровна",
+      "birthDate": "1988-04-09",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Тула, ул. Ленина, д. 33",
+      "phone": "+7 912 456 78 90",
+      "email": "smirnova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Реклама'",
+      "profession": "Маркетолог",
+      "passportNumber": "4567 890123",
+      "registrationDate": "2020-10-01",
+      "socialSecurityNumber": "456-78-9012",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 45,
+          "applicationDate": "2022-04-12",
+          "status": "Отклонено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Смирнов Иван Натальевич",
+          "relationship": "Сын",
+          "birthDate": "2017-06-12"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "fullName": "Сергеев Антон Дмитриевич",
+      "birthDate": "1983-09-23",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Пенза, ул. Московская, д. 12",
+      "phone": "+7 913 567 89 01",
+      "email": "sergeev@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ОАО 'Связь'",
+      "profession": "Инженер связи",
+      "passportNumber": "5678 901234",
+      "registrationDate": "2016-11-07",
+      "socialSecurityNumber": "567-89-0123",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 46,
+          "applicationDate": "2021-06-16",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "46",
+      "fullName": "Сорокина Елена Владимировна",
+      "birthDate": "1990-07-31",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Курск, ул. Энгельса, д. 19",
+      "phone": "+7 914 678 90 12",
+      "email": "sorokina@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Торговля'",
+      "profession": "Менеджер по продажам",
+      "passportNumber": "6789 012345",
+      "registrationDate": "2019-12-01",
+      "socialSecurityNumber": "678-90-1234",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 47,
+          "applicationDate": "2022-08-21",
+          "status": "В процессе"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "47",
+      "fullName": "Николаев Павел Андреевич",
+      "birthDate": "1977-12-06",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Тверь, ул. Советская, д. 7",
+      "phone": "+7 915 789 01 23",
+      "email": "nikolaev@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Водитель",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2018-03-18",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 48,
+          "applicationDate": "2021-10-09",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Николаева Ольга Павловна",
+          "relationship": "Дочь",
+          "birthDate": "2004-03-22"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "fullName": "Крылова Виктория Сергеевна",
+      "birthDate": "1986-03-19",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Брянск, ул. Фрунзе, д. 24",
+      "phone": "+7 916 890 12 34",
+      "email": "krylova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Медицина'",
+      "profession": "Медсестра",
+      "passportNumber": "8901 234567",
+      "registrationDate": "2020-05-04",
+      "socialSecurityNumber": "890-12-3456",
+      "education": "Среднее специальное",
+      "applicationHistory": [
+        {
+          "applicationId": 49,
+          "applicationDate": "2022-02-26",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Крылов Иван Викторович",
+          "relationship": "Сын",
+          "birthDate": "2014-11-09"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "fullName": "Орлов Дмитрий Игоревич",
+      "birthDate": "1993-06-26",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Белгород, ул. 50 лет Октября, д. 11",
+      "phone": "+7 917 901 23 45",
+      "email": "orlov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'ИТ'",
+      "profession": "Разработчик",
+      "passportNumber": "9012 345678",
+      "registrationDate": "2019-07-14",
+      "socialSecurityNumber": "901-23-4567",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 50,
+          "applicationDate": "2021-12-03",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "50",
+      "fullName": "Михайлова Алина Александровна",
+      "birthDate": "1984-10-13",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Смоленск, ул. Ленина, д. 3",
+      "phone": "+7 918 012 34 56",
+      "email": "mikhaylova@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Финансы'",
+      "profession": "Бухгалтер",
+      "passportNumber": "0123 456789",
+      "registrationDate": "2017-12-21",
+      "socialSecurityNumber": "012-34-5678",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 51,
+          "applicationDate": "2022-06-12",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "51",
+      "fullName": "Федотов Илья Сергеевич",
+      "birthDate": "1979-01-30",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Калининград, ул. Горького, д. 18",
+      "phone": "+7 919 123 45 67",
+      "email": "fedotov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Стройка'",
+      "profession": "Инженер-строитель",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2016-04-09",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 52,
+          "applicationDate": "2021-09-24",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Федотова Анна Ильевна",
+          "relationship": "Дочь",
+          "birthDate": "2006-04-17"
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "fullName": "Гусева Марина Олеговна",
+      "birthDate": "1991-05-09",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Архангельск, ул. Поморская, д. 22",
+      "phone": "+7 920 234 56 78",
+      "email": "guseva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Образование'",
+      "profession": "Учитель",
+      "passportNumber": "2345 678901",
+      "registrationDate": "2020-10-19",
+      "socialSecurityNumber": "234-56-7890",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 53,
+          "applicationDate": "2022-03-05",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Гусев Иван Маринович",
+          "relationship": "Сын",
+          "birthDate": "2019-07-30"
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "fullName": "Кузьмин Алексей Викторович",
+      "birthDate": "1982-09-16",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Мурманск, ул. Ленина, д. 5",
+      "phone": "+7 921 345 67 89",
+      "email": "kuzmin@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Логист",
+      "passportNumber": "3456 789012",
+      "registrationDate": "2018-06-03",
+      "socialSecurityNumber": "345-67-8901",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 54,
+          "applicationDate": "2021-12-01",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Кузьмина Елена Алексеевна",
+          "relationship": "Дочь",
+          "birthDate": "2008-12-01"
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "fullName": "Лазарева Юлия Петровна",
+      "birthDate": "1987-12-02",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Владивосток, ул. Светланская, д. 14",
+      "phone": "+7 922 456 78 90",
+      "email": "lazareva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Медиа'",
+      "profession": "Журналист",
+      "passportNumber": "4567 890123",
+      "registrationDate": "2019-08-27",
+      "socialSecurityNumber": "456-78-9012",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 55,
+          "applicationDate": "2022-05-16",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "55",
+      "fullName": "Белов Игорь Николаевич",
+      "birthDate": "1978-04-24",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Волгоград, ул. Мира, д. 8",
+      "phone": "+7 923 567 89 01",
+      "email": "belov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ОАО 'Энергия'",
+      "profession": "Электрик",
+      "passportNumber": "5678 901234",
+      "registrationDate": "2016-09-12",
+      "socialSecurityNumber": "567-89-0123",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 56,
+          "applicationDate": "2021-04-05",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Белова Анна Игоревна",
+          "relationship": "Дочь",
+          "birthDate": "2002-11-18"
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "fullName": "Соболева Анна Дмитриевна",
+      "birthDate": "1990-07-15",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Саратов, ул. Радищева, д. 16",
+      "phone": "+7 924 678 90 12",
+      "email": "soboleva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Фармацевтика'",
+      "profession": "Фармацевт",
+      "passportNumber": "6789 012345",
+      "registrationDate": "2020-11-10",
+      "socialSecurityNumber": "678-90-1234",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 57,
+          "applicationDate": "2022-07-22",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Соболев Дмитрий Антонович",
+          "relationship": "Сын",
+          "birthDate": "2015-03-05"
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "fullName": "Воробьев Максим Сергеевич",
+      "birthDate": "1984-11-31",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Ижевск, ул. Пушкинская, д. 9",
+      "phone": "+7 925 789 01 23",
+      "email": "vorobyev@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Машиностроение'",
+      "profession": "Инженер",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2017-12-29",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 58,
+          "applicationDate": "2021-08-18",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Воробьева Екатерина Максимовна",
+          "relationship": "Дочь",
+          "birthDate": "2010-08-24"
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "fullName": "Киселева Оксана Викторовна",
+      "birthDate": "1991-03-06",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Уфа, ул. Ленина, д. 20",
+      "phone": "+7 926 890 12 34",
+      "email": "kiseleva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Консалтинг'",
+      "profession": "Консультант",
+      "passportNumber": "8901 234567",
+      "registrationDate": "2021-02-15",
+      "socialSecurityNumber": "890-12-3456",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 59,
+          "applicationDate": "2022-09-04",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "59",
+      "fullName": "Жуков Павел Андреевич",
+      "birthDate": "1986-08-21",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Краснодар, ул. Красная, д. 25",
+      "phone": "+7 927 901 23 45",
+      "email": "zhukov@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Агро'",
+      "profession": "Агроном",
+      "passportNumber": "9012 345678",
+      "registrationDate": "2019-05-07",
+      "socialSecurityNumber": "901-23-4567",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 60,
+          "applicationDate": "2021-11-23",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Жукова Анна Павловна",
+          "relationship": "Дочь",
+          "birthDate": "2016-06-11"
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "fullName": "Соловьева Екатерина Игоревна",
+      "birthDate": "1992-09-28",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Астрахань, ул. Куйбышева, д. 13",
+      "phone": "+7 928 012 34 56",
+      "email": "solovyeva@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Образование'",
+      "profession": "Учитель",
+      "passportNumber": "0123 456789",
+      "registrationDate": "2020-07-18",
+      "socialSecurityNumber": "012-34-5678",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 61,
+          "applicationDate": "2022-02-29",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Соловьев Иван Екатеринович",
+          "relationship": "Сын",
+          "birthDate": "2018-04-08"
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "fullName": "Егоров Дмитрий Сергеевич",
+      "birthDate": "1985-03-15",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Тверь, ул. Советская, д. 15",
+      "phone": "+7 929 123 45 67",
+      "email": "egorov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Технологии'",
+      "profession": "Инженер",
+      "passportNumber": "1234 567890",
+      "registrationDate": "2015-08-13",
+      "socialSecurityNumber": "123-45-6789",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 62,
+          "applicationDate": "2021-10-24",
+          "status": "Отклонено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "62",
+      "fullName": "Кудряшова Анна Ивановна",
+      "birthDate": "1991-08-12",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Рязань, ул. Ленина, д. 20",
+      "phone": "+7 930 234 56 78",
+      "email": "kudryashova@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Культура'",
+      "profession": "Художник",
+      "passportNumber": "2345 678901",
+      "registrationDate": "2018-04-20",
+      "socialSecurityNumber": "234-56-7890",
+      "education": "Неполное высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 63,
+          "applicationDate": "2022-11-02",
+          "status": "В процессе"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "63",
+      "fullName": "Лебедев Евгений Викторович",
+      "birthDate": "1978-05-18",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Липецк, ул. Первомайская, д. 8",
+      "phone": "+7 931 345 67 89",
+      "email": "lebedev@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Машиностроение'",
+      "profession": "Технолог",
+      "passportNumber": "3456 789012",
+      "registrationDate": "2017-10-23",
+      "socialSecurityNumber": "345-67-8901",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 64,
+          "applicationDate": "2021-12-30",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Лебедева Ирина Евгеньевна",
+          "relationship": "Дочь",
+          "birthDate": "2001-09-03"
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "fullName": "Смирнова Наталья Александровна",
+      "birthDate": "1987-04-10",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Тула, ул. Ленина, д. 33",
+      "phone": "+7 932 456 78 90",
+      "email": "smirnova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Реклама'",
+      "profession": "Маркетолог",
+      "passportNumber": "4567 890123",
+      "registrationDate": "2020-11-02",
+      "socialSecurityNumber": "456-78-9012",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 65,
+          "applicationDate": "2022-05-13",
+          "status": "Отклонено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Смирнов Иван Натальевич",
+          "relationship": "Сын",
+          "birthDate": "2017-06-12"
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "fullName": "Сергеев Антон Дмитриевич",
+      "birthDate": "1982-09-24",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Пенза, ул. Московская, д. 12",
+      "phone": "+7 933 567 89 01",
+      "email": "sergeev@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ОАО 'Связь'",
+      "profession": "Инженер связи",
+      "passportNumber": "5678 901234",
+      "registrationDate": "2016-12-08",
+      "socialSecurityNumber": "567-89-0123",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 66,
+          "applicationDate": "2021-07-17",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "66",
+      "fullName": "Сорокина Елена Владимировна",
+      "birthDate": "1990-07-32",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Курск, ул. Энгельса, д. 19",
+      "phone": "+7 934 678 90 12",
+      "email": "sorokina@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Торговля'",
+      "profession": "Менеджер по продажам",
+      "passportNumber": "6789 012345",
+      "registrationDate": "2019-12-02",
+      "socialSecurityNumber": "678-90-1234",
+      "education": "Среднее профессиональное",
+      "applicationHistory": [
+        {
+          "applicationId": 67,
+          "applicationDate": "2022-09-23",
+          "status": "В процессе"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "67",
+      "fullName": "Николаев Павел Андреевич",
+      "birthDate": "1976-12-07",
+      "gender": "Мужчина",
+      "maritalStatus": "Женат",
+      "address": "г. Тверь, ул. Советская, д. 7",
+      "phone": "+7 935 789 01 23",
+      "email": "nikolaev@mail.com",
+      "citizenship": "Россия",
+      "workplace": "ЗАО 'Транспорт'",
+      "profession": "Водитель",
+      "passportNumber": "7890 123456",
+      "registrationDate": "2018-04-19",
+      "socialSecurityNumber": "789-01-2345",
+      "education": "Среднее",
+      "applicationHistory": [
+        {
+          "applicationId": 68,
+          "applicationDate": "2021-11-10",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Николаева Ольга Павловна",
+          "relationship": "Дочь",
+          "birthDate": "2004-03-22"
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "fullName": "Крылова Виктория Сергеевна",
+      "birthDate": "1985-03-20",
+      "gender": "Женщина",
+      "maritalStatus": "Замужем",
+      "address": "г. Брянск, ул. Фрунзе, д. 24",
+      "phone": "+7 936 890 12 34",
+      "email": "krylova@example.com",
+      "citizenship": "Россия",
+      "workplace": "ООО 'Медицина'",
+      "profession": "Медсестра",
+      "passportNumber": "8901 234567",
+      "registrationDate": "2020-06-05",
+      "socialSecurityNumber": "890-12-3456",
+      "education": "Среднее специальное",
+      "applicationHistory": [
+        {
+          "applicationId": 69,
+          "applicationDate": "2022-03-27",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": [
+        {
+          "name": "Крылов Иван Викторович",
+          "relationship": "Сын",
+          "birthDate": "2014-11-09"
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "fullName": "Орлов Дмитрий Игоревич",
+      "birthDate": "1992-06-27",
+      "gender": "Мужчина",
+      "maritalStatus": "Холост",
+      "address": "г. Белгород, ул. 50 лет Октября, д. 11",
+      "phone": "+7 937 901 23 45",
+      "email": "orlov@mail.ru",
+      "citizenship": "Россия",
+      "workplace": "ООО 'ИТ'",
+      "profession": "Разработчик",
+      "passportNumber": "9012 345678",
+      "registrationDate": "2019-08-15",
+      "socialSecurityNumber": "901-23-4567",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 70,
+          "applicationDate": "2021-12-04",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    },
+    {
+      "id": "70",
+      "fullName": "Михайлова Алина Александровна",
+      "birthDate": "1983-10-14",
+      "gender": "Женщина",
+      "maritalStatus": "Не замужем",
+      "address": "г. Смоленск, ул. Ленина, д. 3",
+      "phone": "+7 938 012 34 56",
+      "email": "mikhaylova@example.com",
+      "citizenship": "Россия",
+      "workplace": "АО 'Финансы'",
+      "profession": "Бухгалтер",
+      "passportNumber": "0123 456789",
+      "registrationDate": "2017-12-22",
+      "socialSecurityNumber": "012-34-5678",
+      "education": "Высшее",
+      "applicationHistory": [
+        {
+          "applicationId": 71,
+          "applicationDate": "2022-07-13",
+          "status": "Одобрено"
+        }
+      ],
+      "familyMembers": []
+    }
+  ]
+}

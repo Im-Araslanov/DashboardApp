@@ -6,7 +6,8 @@ import Layout from './components/Layout';
 import DashboardPage from './pages/DashboardPage';
 import ProfilePage from './pages/ProfilePage';
 import AnalyticsPage from './pages/AnalyticsPage';
-import CitizensListPage from './pages/CitizensListPage'; 
+import CitizensListPage from './pages/CitizensListPage';
+import NewCitizen from './pages/NewCitizenPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/citizens" element={<CitizensListPage />} />
+            <Route path="/new-citizen" element={<NewCitizen />} />
           </Routes>
         </Layout>
       </PageTitleProvider>

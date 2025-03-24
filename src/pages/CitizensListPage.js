@@ -6,22 +6,17 @@ import {
   Modal, 
   message, 
   Dropdown, 
-  Menu, 
   Checkbox,
   Collapse 
 } from 'antd';
 import { 
   SettingOutlined, 
-  ExportOutlined, 
-  // MenuFoldOutlined, 
-  // MenuUnfoldOutlined 
+  ExportOutlined
 } from '@ant-design/icons';
 import menuFoldIcon from '../assets/svgs/menu-fold-icon.svg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import CitizenCardPage from './CitizenCardPage';
 import '../styles/CitizensListPage.scss';
-
-const { Panel } = Collapse;
 
 const CitizensListPage = () => {
   const [data, setData] = useState([]);
@@ -35,18 +30,20 @@ const CitizensListPage = () => {
     total: 0
   });
   const [isToolbarCollapsed, setIsToolbarCollapsed] = useState(false);
+  const [activeKey, setActiveKey] = useState(['toolbar']);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/citizens.json');
-        const { citizens } = await response.json();
+        const response = await fetch("/citizens");
+        const result = await response.json();
         
-        setData(citizens);
+        setData(result);
         setPagination(prev => ({
           ...prev,
-          total: citizens.length
+          total: result.length
         }));
         
         const initialColumns = [
@@ -63,12 +60,20 @@ const CitizensListPage = () => {
           'address'
         ];
         setVisibleColumns(initialColumns);
+      } catch (error) {
+        message.error('Ошибка при загрузке данных');
       } finally {
         setLoading(false);
       }
     };
-    fetchData();
-  }, []);
+
+    if (location.state?.refresh) {
+      fetchData();
+      navigate(location.pathname, { replace: true, state: {} });
+    } else {
+      fetchData();
+    }
+  }, [location.state, location.pathname, navigate]);
 
   const columns = useMemo(() => [
     { title: 'ID', dataIndex: 'id', sorter: (a, b) => a.id - b.id, width: 100 },
@@ -151,14 +156,8 @@ const CitizensListPage = () => {
   };
 
   const exportMenuItems = [
-    {
-      key: 'csv',
-      label: <span onClick={() => handleExport('csv')}>CSV</span>,
-    },
-    {
-      key: 'xlsx',
-      label: <span onClick={() => handleExport('xlsx')}>Excel</span>,
-    },
+    { key: 'csv', label: <span onClick={() => handleExport('csv')}>CSV</span> },
+    { key: 'xlsx', label: <span onClick={() => handleExport('xlsx')}>Excel</span> },
   ];
 
   const rowSelection = {
@@ -167,40 +166,119 @@ const CitizensListPage = () => {
     preserveSelectedRowKeys: true,
   };
 
-  const columnMenu = (
-    <Menu className="column-menu">
-      <div className="column-menu-header">
-        <Button 
-          type="link" 
-          onClick={() => setVisibleColumns(columns.map(c => c.dataIndex))}
+  const columnMenuItems = [
+    {
+      key: 'selection-controls',
+      label: (
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between',
+          padding: '8px 12px',
+          gap: '8px'
+        }}>
+          <Button 
+            type="link" 
+            onClick={() => setVisibleColumns(columns.map(c => c.dataIndex))}
+            style={{ flex: 1 }}
+          >
+            Выбрать все
+          </Button>
+          <Button 
+            type="link" 
+            onClick={() => setVisibleColumns([])}
+            style={{ flex: 1 }}
+          >
+            Сбросить
+          </Button>
+        </div>
+      ),
+      style: { cursor: 'default' },
+      disabled: true
+    },
+    { type: 'divider' },
+    ...columns.map(col => ({
+      key: col.dataIndex,
+      label: (
+        <Checkbox 
+          checked={visibleColumns.includes(col.dataIndex)}
+          onChange={(e) => {
+            if (e.target.checked) {
+              setVisibleColumns(prev => [...prev, col.dataIndex]);
+            } else {
+              setVisibleColumns(prev => prev.filter(c => c !== col.dataIndex));
+            }
+          }}
+          style={{ marginLeft: 8 }}
         >
-          Выбрать все
-        </Button>
-        <Button 
-          type="link" 
-          onClick={() => setVisibleColumns([])}
-        >
-          Сбросить
-        </Button>
-      </div>
-      <Checkbox.Group
-        value={visibleColumns}
-        onChange={setVisibleColumns}
-      >
-        {columns.map(col => (
-          <Menu.Item key={col.dataIndex}>
-            <Checkbox value={col.dataIndex}>{col.title}</Checkbox>
-          </Menu.Item>
-        ))}
-      </Checkbox.Group>
-    </Menu>
-  );
+          {col.title}
+        </Checkbox>
+      )
+    }))
+  ];
 
+  const handleCollapseChange = (keys) => {
+    setIsToolbarCollapsed(keys.length === 0);
+    setActiveKey(keys);
+  };
+
+  const collapseItems = [
+    {
+      key: 'toolbar',
+      label: null,
+      showArrow: false,
+      children: (
+        <div className="main-toolbar">
+          <Button 
+            className="add-button"
+            type="primary" 
+            onClick={() => navigate('/new-citizen')}
+          >
+            Добавить гражданина
+          </Button>
+          
+          <Dropdown 
+            className="export-dropdown"
+            menu={{ items: exportMenuItems }}
+            trigger={['click']}
+            disabled={data.length === 0}
+          >
+            <Button 
+              className="export-button"
+              type="primary" 
+              icon={<ExportOutlined />}
+            >
+              Экспорт данных
+              {selectedRowKeys.length > 0 && <span className="export-counter">({selectedRowKeys.length})</span>}
+            </Button>
+          </Dropdown>
+
+          <Button 
+            className="delete-button"
+            danger 
+            onClick={handleMassDelete} 
+            disabled={selectedRowKeys.length === 0}
+          >
+            Удалить выбранные <span className="delete-counter">({selectedRowKeys.length})</span>
+          </Button>
+
+          <Dropdown 
+            className="columns-dropdown"
+            menu={{ items: columnMenuItems }}
+            trigger={['click']}
+          >
+            <Button className="columns-button" icon={<SettingOutlined />}>
+              Столбцы <span className="columns-counter">{visibleColumns.length}/{columns.length}</span>
+            </Button>
+          </Dropdown>
+        </div>
+      )
+    }
+  ];
 
   return (
     <div className="citizens-page">
       <div className="toolbar-control">
-      <Input.Search
+        <Input.Search
           className="search-input"
           placeholder="Поиск по всем полям"
           allowClear
@@ -209,71 +287,21 @@ const CitizensListPage = () => {
           className="toolbar-toggle-button"
           type="text" 
           icon={<img src={menuFoldIcon} alt="Menu Fold Icon" />}
-          // icon={isToolbarCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          onClick={() => setIsToolbarCollapsed(!isToolbarCollapsed)}
+          onClick={() => {
+            setIsToolbarCollapsed(!isToolbarCollapsed);
+            setActiveKey(isToolbarCollapsed ? ['toolbar'] : []);
+          }}
         />
       </div>
 
       <Collapse 
         className="toolbar-collapse" 
-        activeKey={isToolbarCollapsed ? [] : ['toolbar']}
+        activeKey={activeKey}
+        onChange={handleCollapseChange}
         bordered={false}
         ghost
-      >
-        <Panel 
-          className="toolbar-panel"
-          key="toolbar" 
-          showArrow={false}
-          header={null}
-        >
-
-          
-          <div className="main-toolbar">
-            <Button 
-              className="add-button"
-              type="primary" 
-              onClick={() => navigate('/citizens/new')}
-            >
-              Добавить гражданина
-            </Button>
-            
-            <Dropdown 
-              className="export-dropdown"
-              menu={{ items: exportMenuItems }}
-              trigger={['click']}
-              disabled={data.length === 0}
-            >
-              <Button 
-                className="export-button"
-                type="primary" 
-                icon={<ExportOutlined />}
-              >
-                Экспорт данных
-                {selectedRowKeys.length > 0 && <span className="export-counter">({selectedRowKeys.length})</span>}
-              </Button>
-            </Dropdown>
-
-            <Button 
-              className="delete-button"
-              danger 
-              onClick={handleMassDelete} 
-              disabled={selectedRowKeys.length === 0}
-            >
-              Удалить выбранные <span className="delete-counter">({selectedRowKeys.length})</span>
-            </Button>
-
-            <Dropdown 
-              className="columns-dropdown"
-              overlay={columnMenu} 
-              trigger={['click']}
-            >
-              <Button className="columns-button" icon={<SettingOutlined />}>
-                Столбцы <span className="columns-counter">{visibleColumns.length}/{columns.length}</span>
-              </Button>
-            </Dropdown>
-          </div>
-        </Panel>
-      </Collapse>
+        items={collapseItems}
+      />
 
       <Table
         className="citizens-table"
